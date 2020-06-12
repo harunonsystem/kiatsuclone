@@ -76,12 +76,11 @@ class Stream extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('kiatsu'),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.share),
-            onPressed: () {
-              Share.share('hPa #kiatsu');
-            },
+            icon: Icon(Icons.settings),
+            onPressed: () {},
           )
         ],
       ),
@@ -90,32 +89,75 @@ class Stream extends StatelessWidget {
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasError) {
             print(snapshot.error);
+            return Center(
+              child: const Text('no data.'),
+            );
           }
-          return Center(
-            child: Column(
+          return Container(
+            //color: Colors.purple,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 24.0,
+                Container(
+                  margin: EdgeInsets.fromLTRB(30.0, 0, 10, 0),
+                  //color: Colors.lightBlue,
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      const Text(
+                        'pressure',
+                        style:
+                            TextStyle(color: Colors.lightBlue, fontSize: 24.0),
+                      ),
+                      SizedBox(height: 10.0),
+                      new Text(
+                        snapshot.data.main.pressure.toString() + ' hPa',
+                        style: TextStyle(
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    ],
+                  ),
                 ),
-                const Text('pressure'),
-                new Text(
-                  snapshot.data.main.pressure.toString() + ' hPa',
-                  style: TextStyle(
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.purple),
-                ),
-                new Text(
-                  snapshot.data.name.toString(),
-                  style: TextStyle(fontSize: 24.0, color: Colors.lightBlue),
-                ),
-                IconButton(
-                  color: Colors.blue,
-                  icon: Icon(Icons.share),
-                  onPressed: () {
-                    Share.share(snapshot.data.main.pressure.toString() +
-                        ' hPa #kiatsu🥺');
-                  },
+                Container(
+                  //color: Colors.amber,
+                  //margin: EdgeInsets.all(10.0),
+                  //padding: EdgeInsets.all(10.0),
+                  child: Container(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 24.0,
+                        ),
+                        new Text(
+                          snapshot.data.name.toString() +
+                              ' / ' +
+                              snapshot.data.sys.country.toString(),
+                          style: TextStyle(
+                              fontSize: 24.0, color: Colors.lightBlue),
+                        ),
+                        RaisedButton.icon(
+                          label: const Text(
+                            'Share',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          color: Colors.lightGreen,
+                          elevation: 10.0,
+                          icon: Icon(
+                            Icons.share,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {
+                            Share.share(snapshot.data.main.pressure.toString() +
+                                ' hPa #kiatsu');
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),

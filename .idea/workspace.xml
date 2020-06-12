@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f2bd7b48-202c-4a8a-94fb-a3ff40ec6e90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/process/api_getter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/process/api_getter.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -56,21 +59,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1358" height="209" key="GridCell.Tab.0.bottom" timestamp="1591850807047">
+    <state width="1358" height="209" key="GridCell.Tab.0.bottom" timestamp="1591933809604">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591850807047" />
-    <state width="1358" height="209" key="GridCell.Tab.0.center" timestamp="1591850807046">
+    <state width="1358" height="209" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591933809604" />
+    <state width="1358" height="209" key="GridCell.Tab.0.center" timestamp="1591933809603">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591850807046" />
-    <state width="1358" height="209" key="GridCell.Tab.0.left" timestamp="1591850807046">
+    <state width="1358" height="209" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591933809603" />
+    <state width="1358" height="209" key="GridCell.Tab.0.left" timestamp="1591933809603">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591850807046" />
-    <state width="1358" height="209" key="GridCell.Tab.0.right" timestamp="1591850807046">
+    <state width="1358" height="209" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591933809603" />
+    <state width="1358" height="209" key="GridCell.Tab.0.right" timestamp="1591933809604">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591850807046" />
+    <state width="1358" height="209" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591933809604" />
   </component>
 </project>
