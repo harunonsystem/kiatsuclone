@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kiatsuclone/model/weather_model.dart';
+import 'package:kiatsuclone/pages/settings.dart';
 import 'package:kiatsuclone/process/api_getter.dart';
 import 'package:share/share.dart';
 
@@ -25,6 +26,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Stream(),
+      initialRoute: '/settings',
+      routes: <String, WidgetBuilder>{
+        '/settings': (BuildContext context) => Settings()
+      },
     );
   }
 }
@@ -126,37 +131,35 @@ class Stream extends StatelessWidget {
                   //color: Colors.amber,
                   //margin: EdgeInsets.all(10.0),
                   //padding: EdgeInsets.all(10.0),
-                  child: Container(
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(
-                          height: 24.0,
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      new Text(
+                        snapshot.data.name.toString() +
+                            ' / ' +
+                            snapshot.data.sys.country.toString(),
+                        style:
+                            TextStyle(fontSize: 24.0, color: Colors.lightBlue),
+                      ),
+                      RaisedButton.icon(
+                        label: const Text(
+                          'Share',
+                          style: TextStyle(color: Colors.white),
                         ),
-                        new Text(
-                          snapshot.data.name.toString() +
-                              ' / ' +
-                              snapshot.data.sys.country.toString(),
-                          style: TextStyle(
-                              fontSize: 24.0, color: Colors.lightBlue),
+                        color: Colors.lightGreen,
+                        elevation: 10.0,
+                        icon: Icon(
+                          Icons.share,
+                          color: Colors.white,
                         ),
-                        RaisedButton.icon(
-                          label: const Text(
-                            'Share',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          color: Colors.lightGreen,
-                          elevation: 10.0,
-                          icon: Icon(
-                            Icons.share,
-                            color: Colors.white,
-                          ),
-                          onPressed: () {
-                            Share.share(snapshot.data.main.pressure.toString() +
-                                ' hPa #kiatsu');
-                          },
-                        ),
-                      ],
-                    ),
+                        onPressed: () {
+                          Share.share(snapshot.data.main.pressure.toString() +
+                              ' hPa #kiatsu');
+                        },
+                      ),
+                    ],
                   ),
                 )
               ],
