@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kiatsuclone/model/weather_model.dart';
+import 'package:kiatsuclone/pages/forecast.dart';
 import 'package:kiatsuclone/pages/settings.dart';
 import 'package:kiatsuclone/process/api_getter.dart';
 import 'package:share/share.dart';
@@ -26,9 +27,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Stream(),
-      initialRoute: '/settings',
+      initialRoute: '/forecast',
       routes: <String, WidgetBuilder>{
-        '/settings': (BuildContext context) => Settings()
+        '/settings': (BuildContext context) => Settings(),
+        '/forecast': (BuildContext context) => Forecast()
       },
     );
   }
@@ -82,20 +84,32 @@ class Stream extends StatelessWidget {
       appBar: AppBar(
         title: Text('kiatsu'),
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.forum),
+          onPressed: () {
+            Navigator.of(context).pushNamed('/forecast');
+          },
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.settings),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed('/settings');
+            },
           )
         ],
       ),
       body: StreamBuilder(
         stream: getData.getWeather().asStream(),
-        builder: (BuildContext context, snapshot) {
-          if (snapshot.hasError) {
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot != null && snapshot.hasError) {
             print(snapshot.error);
             return Center(
               child: const Text('no data.'),
+            );
+          } else if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: const Text('loading...'),
             );
           }
           return Container(
@@ -159,6 +173,15 @@ class Stream extends StatelessWidget {
                               ' hPa #kiatsu');
                         },
                       ),
+                      Container(
+                        height: 100,
+                        width: 100,
+                        alignment: Alignment.centerRight,
+                        child: Image.network(
+                            'http://openweathermap.org/img/wn/' +
+                                snapshot.data.weather[0].icon +
+                                '.png'),
+                      )
                     ],
                   ),
                 )

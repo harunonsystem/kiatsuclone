@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2bd7b48-202c-4a8a-94fb-a3ff40ec6e90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/forecast.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/settings.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/process/api_getter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/process/api_getter.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,16 @@
       <recent name="$PROJECT_DIR$/lib/process" />
     </key>
   </component>
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="forecast_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test">
+      <option name="testFile" value="$PROJECT_DIR$/test/forecast_test.dart" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter Test.forecast_test.dart" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -59,21 +69,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1358" height="209" key="GridCell.Tab.0.bottom" timestamp="1591949637677">
+    <state x="198" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592340352081">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591949637677" />
-    <state width="1358" height="209" key="GridCell.Tab.0.center" timestamp="1591949637677">
+    <state x="198" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340352081" />
+    <state x="471" y="270" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1592340269153">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591949637677" />
-    <state width="1358" height="209" key="GridCell.Tab.0.left" timestamp="1591949637676">
+    <state x="471" y="270" key="#com.intellij.ide.util.TreeFileChooserDialog/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340269153" />
+    <state width="1358" height="209" key="GridCell.Tab.0.bottom" timestamp="1592340763163">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591949637676" />
-    <state width="1358" height="209" key="GridCell.Tab.0.right" timestamp="1591949637677">
+    <state width="1358" height="209" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340763163" />
+    <state width="1358" height="209" key="GridCell.Tab.0.center" timestamp="1592340763162">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1358" height="209" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1591949637677" />
+    <state width="1358" height="209" key="GridCell.Tab.0.center/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340763162" />
+    <state width="1358" height="209" key="GridCell.Tab.0.left" timestamp="1592340763162">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="209" key="GridCell.Tab.0.left/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340763162" />
+    <state width="1358" height="209" key="GridCell.Tab.0.right" timestamp="1592340763162">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1358" height="209" key="GridCell.Tab.0.right/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592340763162" />
+    <state x="322" y="224" key="IDE.errors.dialog" timestamp="1592050417527">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="322" y="224" key="IDE.errors.dialog/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592050417527" />
+    <state x="399" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1592311888247">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="399" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-61.1920.1057@0.23.1440.877" timestamp="1592311888247" />
   </component>
 </project>
